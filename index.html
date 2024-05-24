@@ -1,0 +1,36 @@
+<head>
+<title>who u?</title>
+</head>
+
+<div class="hio">
+
+
+<input type="text"  placeholder="url here" id="hi"></input>
+<button onclick="hi()">open in about:blank</button>
+</div>
+
+
+<script>
+p = 1;
+var url;
+
+function hi() {
+url = document.getElementById("hi").value;
+var win = window.open('about:blank')
+var iframe = win.document.createElement('iframe')
+iframe.style.width = "100%";
+iframe.style.height = "100%";
+iframe.style.border = "none";
+iframe.src = "https://" + url;
+win.document.body.appendChild(iframe);
+}
+</script>
+<style>
+.hio{
+border-radius: 4px;
+padding: 5px;
+background-color: black;
+display: inline-block;
+text-align: center;
+}
+</style>
