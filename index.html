@@ -34,3 +34,44 @@ display: inline-block;
 text-align: center;
 }
 </style>
+
+<style>
+        .slide-back-and-forth {
+            width: 100%;
+            overflow: hidden;
+            max-width: 500px;
+        }
+
+        .slide-back-and-forth h2 {
+        white-space: nowrap;
+            animation: 6s slide-back-and-forth infinite alternate; /* Alternate between sliding left and right */
+        }
+
+        @keyframes slide-back-and-forth {
+            0% {
+                margin-left: -50%;
+            }
+            100% {
+                margin-left: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-back-and-forth">
+        <h2 style="color: red" id="ll">credit to zeddy bear</h2>
+    </div>
+</body>
+</html>
+<script>
+function lol() {
+    const ballz = ["remember to add https:// to your url", "credit to zeddy bear", "guess what? chicken butt!", "lightspeed is bad"];
+    const bals = ["green", "red", "blue", "yellow"];
+    let o = ballz[Math.floor(Math.random() * 4)];
+    let n = bals[Math.floor(Math.random() * 4)];
+    document.getElementById("ll").textContent = o;
+    document.getElementById("ll").style.color = n;
+}
+
+setInterval(lol, 6000);
+</script>
