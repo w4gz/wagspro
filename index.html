@@ -7,6 +7,11 @@
 
 <input type="text"  placeholder="url here" id="hi"></input>
 <button onclick="hi()">open in about:blank</button>
+<button onclick="lols()">info</button>button>
+</div>
+
+<div id="lol" class="chingchong">
+<p></p>
 </div>
 
 
@@ -33,6 +38,20 @@ background-color: black;
 display: inline-block;
 text-align: center;
 }
+
+.chingchong{
+          height: 300px;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 10px;
+  margin-top:150px;
+  border-radius:10px
 </style>
 
 <style>
@@ -68,8 +87,12 @@ background-color: black;
 </body>
 </html>
 <script>
+
+function lols() {
+lol.style.width = 300px;
+}
 function lol() {
-    const ballz = ["faster than lightspeed", "credit to zeddy", "kfc > mcdonalds", "search smt already"];
+    const ballz = ["NOT a proxy, better", "credit to zeddy", "click info if ur lost", "search smt"];
     const bals = ["green", "red", "blue", "yellow"];
     let o = ballz[Math.floor(Math.random() * 4)];
     let n = bals[Math.floor(Math.random() * 4)];
